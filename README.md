@@ -31,11 +31,75 @@ OPENAI_API_KEY=your_api_key_here
 ```
 
 ## Usage
-Import `scriptgpt` into your Node.js application and use the CLI to generate functions:
 
-```bash
-scriptgpt generate --description "Function description" --inputs "input1,input2" --outputs "output1,output2"
-```
+1. **Create the Configuration File**
+
+    Create a file named `gpt.json` in the root directory of your project.
+
+    Define an array of functions within this file, specifying the following properties for each function:
+    
+    - `name`: The name of the function to be generated (string).
+    - `description`: A brief description of the function's purpose (string).
+    - `parameters`: An array of objects describing the function's input parameters, where each object has:
+        - `name`: The name of the parameter (string).
+        - `type`: The data type of the parameter (e.g., "number", "string", "array", "object") (string).
+    - `return`: An object describing the function's output value, with:
+        - `type`: The data type of the output value (string).
+
+    **Example `gpt.json`:**
+    
+    ```json
+    {
+        "functions": [
+            {
+                "name": "add",
+                "description": "Adds two integers together and returns values",
+                "parameters": [
+                    {
+                        "name": "a",
+                        "type": "int"
+                    },
+                    {
+                        "name": "b",
+                        "type": "int"
+                    }
+                ],
+                "return": "int"
+            },
+            {
+                "name": "subtract",
+                "description": "Subtracts two integers together and returns values",
+                "parameters": [
+                    {
+                        "name": "a",
+                        "type": "int"
+                    },
+                    {
+                        "name": "b",
+                        "type": "int"
+                    }
+                ],
+                "return": "int"
+            }
+        ]
+    }
+    ```
+
+    *Use code with caution. Learn more*
+
+2. **Generate the Functions**
+
+    Run the following command in your terminal:
+
+    ```bash
+    scriptgpt generate
+    ```
+
+    This command will generate the JavaScript functions based on your `gpt.json` configuration and place them in the `root/generated/functions.js` file.
+
+
+
+
 
 ## Code Style
 Generated code follows the Airbnb JavaScript style guide.
