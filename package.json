@@ -1,0 +1,40 @@
+{
+  "name": "scriptgpt",
+  "version": "0.0.1",
+  "author": "Utkarsh Kanwat",
+  "description": "",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src/**/*.ts --fix",
+    "generate": "node dist/index.js generate"
+  },
+  "keywords": [
+    "javascript",
+    "gpt",
+    "code-generation",
+    "natural-language"
+  ],
+  "dependencies": {
+    "acorn": "^8.11.3",
+    "app-root-path": "^3.1.0",
+    "axios": "^1.2.1",
+    "fs-extra": "^11.2.0",
+    "openai": "latest",
+    "reflect-metadata": "^0.2.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "commander": "^11.1.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "tsup": "^8.0.1",
+    "typescript": "^4.9.4"
+  }
+}

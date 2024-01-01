@@ -1,0 +1,64 @@
+{
+    "functions": [
+        {
+            "name": "add",
+            "description": "Adds two inetgers together and return values",
+            "parameters": [
+                {
+                    "name": "a",
+                    "type": "int"
+                },
+                {
+                    "name": "b",
+                    "type": "int"
+                }
+            ],
+            "return": "int"
+        },
+        {
+            "name": "subtract",
+            "description": "Subtracts two inetgers together and return values",
+            "parameters": [
+                {
+                    "name": "a",
+                    "type": "int"
+                },
+                {
+                    "name": "b",
+                    "type": "int"
+                }
+            ],
+            "return": "int"
+        },
+        {
+            "name": "multiply",
+            "description": "Multiplies two inetgers together and return values",
+            "parameters": [
+                {
+                    "name": "a",
+                    "type": "int"
+                },
+                {
+                    "name": "b",
+                    "type": "int"
+                }
+            ],
+            "return": "int"
+        },
+        {
+            "name": "divide",
+            "description": "Divides two inetgers together and return values",
+            "parameters": [
+                {
+                    "name": "a",
+                    "type": "int"
+                },
+                {
+                    "name": "b",
+                    "type": "int"
+                }
+            ],
+            "return": "int"
+        }
+    ]
+}
