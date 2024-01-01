@@ -1,4 +1,4 @@
 // Auto-generated function
- export const subtract = function subtract(num1: number, num2: number): number {
-    return num1 - num2;
+ export const subtract = function subtract(num1: any, num2: any): number {
+    return parseInt(num1) - parseInt(num2);
 };

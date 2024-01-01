@@ -3,9 +3,8 @@ import appRoot from 'app-root-path';
 export const saveFunctionToFile = async (functionName: string, functionCode: string, isTypescript: boolean): Promise<void> => {
 
   var outputFolderPath = appRoot + '/generated';
-  if (!fs.existsSync(outputFolderPath)) {
-    fs.mkdirSync(outputFolderPath);
-  }
+
+  console.log('existsSync:', fs.existsSync(outputFolderPath));
 
 
   var filePath = appRoot + `/generated/${functionName}.${isTypescript ? 'ts' : 'js'}`;

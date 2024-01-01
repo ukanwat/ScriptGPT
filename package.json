@@ -1,14 +1,16 @@
 {
   "name": "scriptgpt",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "Utkarsh Kanwat",
   "description": "",
   "license": "MIT",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "eslint src/**/*.ts --fix",
-    "generate": "node dist/index.js generate"
+    "generate": "node dist/index.js generate",
+    "tsup": "tsup src/index.ts --dts"
   },
   "keywords": [
     "javascript",
@@ -20,9 +22,9 @@
     "acorn": "^8.11.3",
     "app-root-path": "^3.1.0",
     "axios": "^1.2.1",
+    "cosmiconfig": "^9.0.0",
     "fs-extra": "^11.2.0",
-    "openai": "latest",
-    "reflect-metadata": "^0.2.1"
+    "openai": "latest"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
@@ -36,5 +38,8 @@
     "eslint-plugin-import": "^2.29.1",
     "tsup": "^8.0.1",
     "typescript": "^4.9.4"
+  },
+  "bin": {
+    "scriptgpt": "./dist/index.js"
   }
 }

@@ -1,3 +1,5 @@
+#! /usr/bin/env node
+
 import './loadEnv';
 import { program } from 'commander';
 import { generateFunction } from './generateFunction';

@@ -2,13 +2,19 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "lib": ["esnext", "dom"],
+    "declaration": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "dist",
-    "baseUrl": "./src"
+    "outDir": "dist/output",
+    "baseUrl": "./src/"
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

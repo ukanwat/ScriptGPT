@@ -1,4 +1,4 @@
-# scriptgpt
+# ScriptGPT
 
 ## Overview
 `scriptgpt` is a JavaScript library that facilitates the creation of custom functions through natural language descriptions and input-output examples, leveraging OpenAI's GPT-4 API. It is designed to be used within Node.js applications and allows for code generation via a command-line interface.
@@ -9,7 +9,6 @@
 - **API Key Configuration**: OpenAI API key setup via .env file.
 - **API Interaction**: Utilizes OpenAI's API to generate code.
 - **Code Crafting**: Transforms natural language into JavaScript functions with provided examples.
-- **Rigorous Testing**: Ensures function reliability using input-output pairs for testing.
 - **File Output**: Saves the generated and tested functions into files.
 
 ## Prerequisites
@@ -84,8 +83,6 @@ OPENAI_API_KEY=your_api_key_here
         ]
     }
     ```
-
-    *Use code with caution. Learn more*
 
 2. **Generate the Functions**
 

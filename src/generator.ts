@@ -1,24 +1,55 @@
 import { generateFunction } from "./generateFunction";
 import fs from 'fs-extra';
 import appRootPath from "app-root-path";
+import { cosmiconfig, cosmiconfigSync } from 'cosmiconfig';
+
+
+
 
 
 const fileName = 'gpt.json';
 
 
+
+
+
+
+
+
+
+
 export async function generator(generateAll: boolean): Promise<void> {
+
+
+    if (!fs.existsSync(appRootPath + '/generated')) {
+        fs.mkdirSync(appRootPath + '/generated');
+    }
 
 
     var isTypescript = fs.existsSync(appRootPath + '/tsconfig.json');//TODO: improve this check
 
 
-    const filePath = appRootPath + `/${fileName}`;
+    // const filePath = appRootPath + `/${fileName}`;
 
     var generatedFunctions: string[] = [];
 
+
+    const explorerSync = cosmiconfigSync('scriptgpt', {
+        searchPlaces: ['scriptgpt.config.json', 'package.json'],
+    });
+
+    const result = explorerSync.search();
+    var config;
+    console.log(result);
+
+    if (result && result.config)
+        config = result.config;
+    else { console.error('No config file found'); return; }
+
     try {
-        const data = fs.readFileSync(filePath, 'utf-8');
-        const jsonData = JSON.parse(data);
+        // const data = fs.readFileSync(filePath, 'utf-8');
+        // const jsonData = JSON.parse(data);
+        const jsonData = config;
 
 
         for (const value of jsonData.functions) {
@@ -55,7 +86,7 @@ export async function generator(generateAll: boolean): Promise<void> {
 
     var fullCode = "";
     for (const val of generatedFunctions) {
-        fullCode = fullCode + `import {${val}} from './${val}.${isTypescript ? 'ts' : 'js'}';\n`;
+        fullCode = fullCode + `import {${val}} from './${val}';\n`;
     }
     fullCode = fullCode + `export var functions = {\n`;
     for (const val of generatedFunctions) {
