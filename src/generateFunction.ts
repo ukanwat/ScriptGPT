@@ -4,16 +4,17 @@ import { testFunction } from './services/functionTester';
 import { saveFunctionToFile } from './services/fileSaver';
 import appRootPath from 'app-root-path';
 import fs from 'fs-extra';
-export const generateFunction = async (functionName: string, description: string, parameters: string[], returnType: string, isTypescript: boolean) => {
+import chalk from 'chalk';
+export const generateFunction = async (functionName: string, description: string, spec: any, isTypescript: boolean) => {
 
 
 
 
-  const prompt = buildPromptString(description, parameters, returnType);
+  const prompt = buildPromptString(description, spec);
   try {
-    console.log('Prompt sent to GPT-4:', prompt);
+
     const generatedCode = await generateCodeWithGPT4(prompt, functionName, isTypescript); // Pass only the prompt
-    console.log('Generated Code:', generatedCode);
+    console.log(`\`${functionName}\` code:\n`, chalk.blue(generatedCode));
 
 
     await saveFunctionToFile(functionName, generatedCode, isTypescript);

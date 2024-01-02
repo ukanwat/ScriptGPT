@@ -2,12 +2,7 @@ import { generateFunction } from "./generateFunction";
 import fs from 'fs-extra';
 import appRootPath from "app-root-path";
 import { cosmiconfig, cosmiconfigSync } from 'cosmiconfig';
-
-
-
-
-
-const fileName = 'gpt.json';
+import path from "path";
 
 
 
@@ -16,20 +11,27 @@ const fileName = 'gpt.json';
 
 
 
+export let generatePath: string = appRootPath + '/generated';
+
+
+
+
+// outputPath in config file is relative to the root of the project
 
 
 export async function generator(generateAll: boolean): Promise<void> {
 
 
-    if (!fs.existsSync(appRootPath + '/generated')) {
-        fs.mkdirSync(appRootPath + '/generated');
-    }
+
+
+
+
+
 
 
     var isTypescript = fs.existsSync(appRootPath + '/tsconfig.json');//TODO: improve this check
 
-
-    // const filePath = appRootPath + `/${fileName}`;
+    ;
 
     var generatedFunctions: string[] = [];
 
@@ -39,12 +41,23 @@ export async function generator(generateAll: boolean): Promise<void> {
     });
 
     const result = explorerSync.search();
+
+
+
     var config;
     console.log(result);
 
     if (result && result.config)
         config = result.config;
     else { console.error('No config file found'); return; }
+
+    generatePath = config.outputPath ? path.join(appRootPath.path, config.outputPath) : generatePath;
+
+    if (!fs.existsSync(generatePath)) {
+        fs.mkdirSync(generatePath, { recursive: true });
+        console.log(`Created folder ${generatePath}`);
+    }
+
 
     try {
         // const data = fs.readFileSync(filePath, 'utf-8');
@@ -58,8 +71,9 @@ export async function generator(generateAll: boolean): Promise<void> {
             }
 
 
-            var outputPath = appRootPath + '/generated/' + value.name + '.js';
-            if (fs.existsSync(outputPath) && generateAll === false) {
+            var filePath = path.join(generatePath, '/' + (value.name as string) + (isTypescript ? ".ts" : '.js'));
+
+            if (fs.existsSync(filePath) && generateAll === false) {
                 console.log(`Function with name '${value.name}' already exists.`);
                 generatedFunctions.push(value.name);
                 continue;
@@ -67,10 +81,9 @@ export async function generator(generateAll: boolean): Promise<void> {
 
 
 
-            generateFunction(value.name, value.description, value.parameters.map((element: any) => JSON.stringify(element))
-                , value.return, isTypescript);
+            var spec = value;
+            await generateFunction(value.name, value.description, spec, isTypescript);
             generatedFunctions.push(value.name);
-            console.log(generatedFunctions)
         }
 
 
@@ -81,8 +94,8 @@ export async function generator(generateAll: boolean): Promise<void> {
     }
 
 
-    console.log(generatedFunctions);
-    var functionsFilePath = appRootPath + `/generated/functions.${isTypescript ? 'ts' : 'js'}`;
+
+    var functionsFilePath = generatePath + `/index.${isTypescript ? 'ts' : 'js'}`;
 
     var fullCode = "";
     for (const val of generatedFunctions) {
@@ -95,7 +108,6 @@ export async function generator(generateAll: boolean): Promise<void> {
     fullCode = fullCode + `};`;
 
 
-    console.log(fullCode);
 
     try {
         await fs.writeFile(functionsFilePath, fullCode, { encoding: 'utf8' });

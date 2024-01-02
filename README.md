@@ -1,7 +1,7 @@
 # ScriptGPT
 
 ## Overview
-`scriptgpt` is a JavaScript library that facilitates the creation of custom functions through natural language descriptions and input-output examples, leveraging OpenAI's GPT-4 API. It is designed to be used within Node.js applications and allows for code generation via a command-line interface.
+`scriptgpt` is a JavaScript library that facilitates the creation of custom functions through natural language descriptions and input-output examples, leveraging OpenAI's GPT-4 API. It allows for code generation via a command-line interface.
 
 ## Features
 - **Function Import**: Integration with Node.js applications for dynamic function creation.
@@ -12,7 +12,6 @@
 - **File Output**: Saves the generated and tested functions into files.
 
 ## Prerequisites
-- Node.js
 - An OpenAI API key
 
 ## Installation
