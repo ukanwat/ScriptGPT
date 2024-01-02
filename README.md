@@ -80,8 +80,7 @@ OPENAI_API_KEY=your_api_key_here
 
 
 ## How ScriptGPT works?
-![workflow](http://github.com/ukanwat/scriptgpt/docs/images/scriptgpt.png=x500)
-
+<img src="http://github.com/ukanwat/scriptgpt/docs/images/scriptgpt.png" width="500" />
 
 ## Code Style
 Generated code follows the Airbnb JavaScript style guide.
