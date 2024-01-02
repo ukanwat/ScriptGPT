@@ -14,7 +14,7 @@ program.command('generate')
   // .requiredOption('-i --inputs <values>', 'Comma-separated input values', (val: string) => val.split(','))
   // .requiredOption('-o --outputs <values>', 'Comma-separated output values', (val: string) => val.split(','))
   // .requiredOption('-f --file <path>', 'File path to save the generated function')
-  .action(async (options: { all: any; }) => {
+  .action(async (options) => {
     var generateAll = false;
     if (options.all) generateAll = true;
     await generator(generateAll);

@@ -3,6 +3,7 @@ import fs from 'fs-extra';
 import appRootPath from "app-root-path";
 import { cosmiconfig, cosmiconfigSync } from 'cosmiconfig';
 import path from "path";
+import { FunctionSpec } from "interfaces/FunctionSpec";
 
 
 
@@ -66,6 +67,9 @@ export async function generator(generateAll: boolean): Promise<void> {
 
 
         for (const value of jsonData.functions) {
+
+
+
             if (generatedFunctions.includes(value.name)) {
                 console.error(`Function with name '${value.name}' already exists. Please choose a different name.`);
             }
@@ -81,7 +85,7 @@ export async function generator(generateAll: boolean): Promise<void> {
 
 
 
-            var spec = value;
+            var spec = value as FunctionSpec;
             await generateFunction(value.name, value.description, spec, isTypescript);
             generatedFunctions.push(value.name);
         }

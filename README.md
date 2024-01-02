@@ -82,18 +82,40 @@ OPENAI_API_KEY=your_api_key_here
 ## How ScriptGPT works?
 <img src="https://github.com/ukanwat/ScriptGPT/blob/master/docs/images/scriptgpt.png" width="500" />
 
-## Code Style
-Generated code follows the Airbnb JavaScript style guide.
+
+
+
+## Project Roadmap
+
+### Completed Features
+
+- [x] **Automatic Library Install Functionality:**
+  - Users can automatically install required libraries for generated code.
+
+- [x] **Agent Planning Before Writing Code:**
+  - The agent plans its approach before generating code for improved organization.
+
+### Future Considerations
+
+- [ ] **RAG System Integration:**
+  - Implement a RAG (Read, Ask, Generate) system for better library documentation utilization.
+  - Enable the agent to ask clarifying questions about the documentation.
+
+- [ ] **Return Class in Generated Code:**
+  - Modify code generation to include class information, not just functions.
+
+- [ ] **User Feedback Mechanism:**
+  - Implement a user feedback mechanism for code improvements.
+
+
+
+
 
 ## Contributing
-Contributions are welcome. Please ensure that your contributions comply with the project's code style and testing requirements.
+Fork the repository and create a new branch for your contributions. Submit a pull request detailing changes and their purpose.
 
 ## License
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Acknowledgements
-- OpenAI for providing the GPT-4 API.
 - The contributors to the `eslint-config-airbnb-base` project for their code style guide.
-
-## Author
-- Utkarsh Kanwat
