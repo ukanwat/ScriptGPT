@@ -1,19 +1,15 @@
 {
     "functions": [
         {
-            "name": "add",
-            "description": "Adds two inetgers together and return values",
+            "name": "unique",
+            "description": "return all unique values in an array. use lodash library.",
             "parameters": [
                 {
-                    "name": "a",
-                    "type": "int"
-                },
-                {
-                    "name": "b",
-                    "type": "int"
+                    "name": "values",
+                    "type": "number[]"
                 }
             ],
-            "return": "int"
+            "return": "number[]"
         },
         {
             "name": "subtract",
@@ -59,6 +55,43 @@
                 }
             ],
             "return": "int"
+        },
+        {
+            "name": "palindromeNumber",
+            "description": "Given an integer x, return true if x is a palindrome, and false otherwise.",
+            "parameters": [
+                {
+                    "name": "num",
+                    "type": "int"
+                }
+            ],
+            "return": "bool"
+        },
+        {
+            "name": "findMatrix",
+            "description": "You are given an integer array nums. You need to create a 2D array from nums satisfying the following conditions:\nThe 2D array should contain only the elements of the array nums.\nEach row in the 2D array contains distinct integers.\nThe number of rows in the 2D array should be minimal.\n\nReturn the resulting array. If there are multiple answers, return any of them.\nNote that the 2D array can have a different number of elements on each row.",
+            "parameters": [
+                {
+                    "name": "nums",
+                    "type": "int[]"
+                }
+            ],
+            "return": "int[][]"
+        },
+        {
+            "name": "findMedianSortedArrays",
+            "description": "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.\nThe overall run time complexity should be O(log (m+n)).",
+            "parameters": [
+                {
+                    "name": "nums1",
+                    "type": "number[]"
+                },
+                {
+                    "name": "nums2",
+                    "type": "number[]"
+                }
+            ],
+            "return": "number"
         }
     ]
 }

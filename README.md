@@ -32,7 +32,7 @@ OPENAI_API_KEY=your_api_key_here
 
 1. **Create the Configuration File**
 
-    Create a file named `gpt.json` in the root directory of your project.
+    Create a file named `scriptgpt.config.json` in the root directory of your project.
 
     Define an array of functions within this file, specifying the following properties for each function:
     
@@ -44,7 +44,7 @@ OPENAI_API_KEY=your_api_key_here
     - `return`: An object describing the function's output value, with:
         - `type`: The data type of the output value (string).
 
-    **Example `gpt.json`:**
+    **Example `scriptgpt.config.json`:**
     
     ```json
     {
