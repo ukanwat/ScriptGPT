@@ -80,7 +80,7 @@ OPENAI_API_KEY=your_api_key_here
 
 
 ## How ScriptGPT works?
-![alt text](https://github.com/ukanwat/ScriptGPT/blob/master/docs/images/scriptgpt.png)
+![workflow](http://github.com/ukanwat/scriptgpt/docs/images/scriptgpt.png=x500)
 
 
 ## Code Style
