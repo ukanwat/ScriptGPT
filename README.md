@@ -63,21 +63,6 @@ OPENAI_API_KEY=your_api_key_here
                     }
                 ],
                 "return": "int"
-            },
-            {
-                "name": "subtract",
-                "description": "Subtracts two integers together and returns values",
-                "parameters": [
-                    {
-                        "name": "a",
-                        "type": "int"
-                    },
-                    {
-                        "name": "b",
-                        "type": "int"
-                    }
-                ],
-                "return": "int"
             }
         ]
     }
@@ -94,7 +79,8 @@ OPENAI_API_KEY=your_api_key_here
     This command will generate the JavaScript functions based on your `gpt.json` configuration and place them in the `root/generated/functions.js` file.
 
 
-
+## How ScriptGPT works?
+![alt text](http://github.com/ukanwat/scriptgpt/docs/images/scriptgpt.png)
 
 
 ## Code Style
