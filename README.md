@@ -5,10 +5,10 @@
 
 <p align="center">
   <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/janhq/jan"/>
-  <img alt="Github Last Commit" src="https://img.shields.io/github/last-commit/janhq/jan"/>
-  <img alt="Github Contributors" src="https://img.shields.io/github/contributors/janhq/jan"/>
-  <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/janhq/jan"/>
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/ukanwat/scriptgpt"/>
+  <img alt="Github Last Commit" src="https://img.shields.io/github/last-commit/ukanwat/scriptgpt"/>
+  <img alt="Github Contributors" src="https://img.shields.io/github/contributors/ukanwat/scriptgpt"/>
+  <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/ukanwat/scriptgpt"/>
   <img alt="Discord" src="https://img.shields.io/discord/1107178041848909847?label=discord"/>
 </p>
 

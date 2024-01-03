@@ -20,7 +20,9 @@
     "openai",
     "ai",
     "agent",
-    "natural-language"
+    "natural-language",
+    "gpt",
+    "llm"
   ],
   "dependencies": {
     "@ava/typescript": "^4.1.0",
