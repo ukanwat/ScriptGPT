@@ -1,6 +1,6 @@
 [![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/ukanwat/ScriptGPT/blob/master/package.json)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ukanwat/ScriptGPT/blob/master/LICENSE)
-[![Release](https://img.shields.io/github/v/release/ukanwat/ScriptGPT.svg)](https://github.com/ukanwat/ScriptGPT/releases)
+[![Release](https://img.shields.io/github/v/release/ukanwat/ScriptGPT.svg?include_prereleases)](https://github.com/ukanwat/ScriptGPT/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ukanwat/ScriptGPT/pulls)
 
 
