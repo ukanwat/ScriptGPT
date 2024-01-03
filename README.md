@@ -3,14 +3,22 @@
 </p>
 
 
-[![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/ukanwat/ScriptGPT/blob/master/package.json)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ukanwat/ScriptGPT/blob/master/LICENSE)
-[![Release](https://img.shields.io/github/v/release/ukanwat/ScriptGPT.svg?include_prereleases)](https://github.com/ukanwat/ScriptGPT/releases)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ukanwat/ScriptGPT/pulls)
+<p align="center">
+  <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+  <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/janhq/jan"/>
+  <img alt="Github Last Commit" src="https://img.shields.io/github/last-commit/janhq/jan"/>
+  <img alt="Github Contributors" src="https://img.shields.io/github/contributors/janhq/jan"/>
+  <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed/janhq/jan"/>
+  <img alt="Discord" src="https://img.shields.io/discord/1107178041848909847?label=discord"/>
+</p>
 
 
-# ScriptGPT
+
+<h1 align="center">ScriptGPT</h1>
+
+<p align="center">
 ⚡️ Accelerate development by assigning feature creation to an AI agent, freeing you to focus on project architecture and integration.
+</p>
 
 
 ## Why ScriptGPT? 🚀

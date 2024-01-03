@@ -1,6 +1,6 @@
 {
   "name": "scriptgpt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Utkarsh Kanwat",
   "description": "",
   "license": "MIT",
@@ -12,8 +12,7 @@
     "build": "tsc",
     "lint": "eslint src/**/*.ts --fix",
     "generate": "node dist/index.js generate",
-    "tsup": "tsup src/index.ts --dts",
-    "publish": "npm publish"
+    "tsup": "tsup src/index.ts --dts"
   },
   "keywords": [
     "gpt4",
