@@ -146,7 +146,7 @@ OPENAI_API_KEY=your_api_key_here
 Fork the repository and create a new branch for your contributions. Submit a pull request detailing changes and their purpose.
 
 ## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 - The contributors to the `eslint-config-airbnb-base` project for their code style guide.
