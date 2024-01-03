@@ -1,10 +1,15 @@
+<p align="center">
+  <img src="https://github.com/ukanwat/ScriptGPT/blob/master/docs/images/SG.png" width="200" alt="Project Logo">
+</p>
+
+
 [![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/ukanwat/ScriptGPT/blob/master/package.json)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ukanwat/ScriptGPT/blob/master/LICENSE)
 [![Release](https://img.shields.io/github/v/release/ukanwat/ScriptGPT.svg?include_prereleases)](https://github.com/ukanwat/ScriptGPT/releases)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ukanwat/ScriptGPT/pulls)
 
 
-# 📜 ScriptGPT
+# ScriptGPT
 ⚡️ Accelerate development by assigning feature creation to an AI agent, freeing you to focus on project architecture and integration.
 
 
