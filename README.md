@@ -1,15 +1,32 @@
-# ScriptGPT
+# 📜 ScriptGPT
 
 ## Overview
-`scriptgpt` is a JavaScript library that facilitates the creation of custom functions through natural language descriptions and input-output examples, leveraging OpenAI's GPT-4 API. It allows for code generation via a command-line interface.
+⚡️ Accelerate development by assigning feature creation to an AI agent, freeing you to focus on project architecture and integration.
 
-## Features
-- **Function Import**: Integration with Node.js applications for dynamic function creation.
+
+## Why ScriptGPT? 🚀
+
+- **Hand off feature development to an AI agent:** Let it excel in what it does best while you focus on managing how everything works together.
+  
+- **Control assistance:** Specify how much help you need. If a task is beyond the AI agents capability, you can take control and handle it yourself.
+
+- **Built for TS/JS:** Tailored to automatically install required libraries, test code, add comments, and more.
+
+- **Overcome limitations of current AI-powered Coding tools:**
+  - *Tools like copilot struggles with effective code integration and lacks planning capabilities. You can use both tools together, copilot can help with writing code and you can offload specific project features to ScriptGPT*
+  - *GPT-Engineer and similar tools aren't yet suitable for large, complex projects, facing difficulties in accessing language-specific tools and bug fixing.*
+
+
+
+
+## How ScriptGPT works?
+<img src="https://github.com/ukanwat/ScriptGPT/blob/master/docs/images/scriptgpt.png" width="400" />
+
 - **CLI Interaction**: Command-line code generation with automated testing.
-- **API Key Configuration**: OpenAI API key setup via .env file.
-- **API Interaction**: Utilizes OpenAI's API to generate code.
-- **Code Crafting**: Transforms natural language into JavaScript functions with provided examples.
-- **File Output**: Saves the generated and tested functions into files.
+- **API Interaction**: Currenty it utilizes OpenAI's API to generate code with plans to integrate additional AI providers.
+- **Code Crafting**: Transforms natural language into TS/JS code with provided specification.
+- **File Output**: Generated code is automatically saved within your project
+
 
 ## Prerequisites
 - An OpenAI API key
@@ -18,7 +35,7 @@
 To use `scriptgpt` in your project, install the package using npm:
 
 ```
-npm install scriptgpt
+npm install scriptgpt -d
 ```
 
 ## Configuration
@@ -78,9 +95,6 @@ OPENAI_API_KEY=your_api_key_here
 
     This command will generate the JavaScript functions based on your `gpt.json` configuration and place them in the `root/generated/functions.js` file.
 
-
-## How ScriptGPT works?
-<img src="https://github.com/ukanwat/ScriptGPT/blob/master/docs/images/scriptgpt.png" width="500" />
 
 
 
